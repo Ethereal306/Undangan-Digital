@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Pixelify+Sans:wght@400..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="undangan.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css">
+    <title>Undangan Digital</title>
+</head>
+<audio id="weddingMusic" loop>
+    <source src="a-thousand-years.mp3" type="audio/mpeg">
+</audio>
+<body class="overflow-locked" data-bs-theme="light">
+    <div class="container-fluid main-page">
+        <div class="row">
+            <div class="col-sm-12 col-md-4 p-0 landing_photo">
+                <img src="pengantin.png" class="img-hero" alt="">
+            </div>
+            <div class="col-sm-12 col-md-8 bg-black landing_card">
+                <div class=" d-flex flex-column justify-content-center align-items-center h-100">
+                    <h1 class="text-center pt-3 title smooth-enter delay-1">Undangan Pernikahan</h1>
+                    <div class="couples-container">
+                        <h1 class="font-weight-bold name-couples text-start smooth-enter delay-1">Alexander Joseph</h1>
+                        <h1 class="font-weight-bold name-couples text-center smooth-enter delay-2">&</h1>
+                        <h1 class="font-weight-bold name-couples text-end smooth-enter delay-3">Victoria Caroline</h1>
+                    </div>
+                    <button class="btn btn-outline-light mt-3 fs-2 rounded-pill button-show button-delay-1"
+                        onclick="BukaUndangan()">Buka Undangan</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="py-5 text-center bg-light" id = "foreword">
+        <div class="container">
+            <p class="lead text-muted italic">"Tanpa mengurangi rasa hormat, kami mengundang Bapak/Ibu/Saudara/i untuk
+                menjadi saksi dari ikatan janji suci pernikahan kami."</p>
+        </div>
+    </section>
+
+    <section class="py-5" >
+        <div class="container">
+            <div class="row align-items-center text-center">
+                <div class="col-md-5">
+                    <img src="pengantin_pria.png" class="img-fluid rounded-circle shadow mb-3"
+                        style="width: 200px; height: 200px; object-fit: cover;" alt="Pengantin Pria">
+                    <h3 class="font-wedding">Alexander Joseph</h3>
+                    <p class="text-muted">Putra dari Bapak Alfred & Ibu Rosalyne</p>
+                </div>
+
+                <div class="col-md-2 my-3">
+                    <h1 class="font-wedding">&</h1>
+                </div>
+
+                <div class="col-md-5">
+                    <img src="pengantin_wanita.png" class="img-fluid rounded-circle shadow mb-3"
+                        style="width: 200px; height: 200px; object-fit: cover;" alt="Pengantin Wanita">
+                    <h3 class="font-wedding">Victoria Caroline</h3>
+                    <p class="text-muted">Putri dari Bapak Christopher & Ibu Evelyn</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="datetime">
+        <div class="container">
+            <h1> Simpan Tanggalnya pada:</h1>
+            <h1>29 Februari 2027</h1>
+            <div class="row justify-content-center mt-4 pb-4">
+                <div class="col-10 col-md-8 col-lg-6">
+                    <div class="d-flex justify-content-center text-center gap-3">
+
+                        <!-- Hari -->
+                        <div class="countdown-box p-3 rounded shadow-sm bg-white border">
+                            <h3 id="days" class="fw-bold mb-0 text-dark">00</h3>
+                            <span class="text-muted small">Hari</span>
+                        </div>
+
+                        <!-- Jam -->
+                        <div class="countdown-box p-3 rounded shadow-sm bg-white border">
+                            <h3 id="hours" class="fw-bold mb-0 text-dark">00</h3>
+                            <span class="text-muted small">Jam</span>
+                        </div>
+
+                        <!-- Menit -->
+                        <div class="countdown-box p-3 rounded shadow-sm bg-white border">
+                            <h3 id="minutes" class="fw-bold mb-0 text-dark">00</h3>
+                            <span class="text-muted small">Menit</span>
+                        </div>
+
+                        <!-- Detik -->
+                        <div class="countdown-box p-3 rounded shadow-sm bg-white border">
+                            <h3 id="seconds" class="fw-bold mb-0 text-dark">00</h3>
+                            <span class="text-muted small">Detik</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-5 bg-light border-top">
+        <div class="container-fluid px-md-5">
+            <div class="row g-4 align-items-stretch">
+
+                <div class="col-12 col-md-6 d-flex flex-column justify-content-center">
+                    <div class="p-4 p-lg-5 bg-white rounded shadow-sm border h-100">
+                        <h2 class="font-wedding display-5 text-center mb-4">Detail Acara</h2>
+
+                        <div class="mb-4 text-center text-md-start">
+                            <div
+                                class="d-flex align-items-center justify-content-center justify-content-md-start gap-2 mb-2">
+                                <span class="fs-4">💍</span>
+                                <h4 class="font-wedding mb-0 fs-3">Akad Nikah</h4>
+                            </div>
+                            <p class="mb-1 fw-bold text-dark">Pukul 08.00 - 10.00 WIB</p>
+                            <p class="text-muted small mb-0">Sabtu, 29 Februari 2027</p>
+                        </div>
+
+                        <hr class="text-muted my-3">
+
+                        <div class="mb-4 text-center text-md-start">
+                            <div
+                                class="d-flex align-items-center justify-content-center justify-content-md-start gap-2 mb-2">
+                                <span class="fs-4">🥂</span>
+                                <h4 class="font-wedding mb-0 fs-3">Resepsi Pernikahan</h4>
+                            </div>
+                            <p class="mb-1 fw-bold text-dark">Pukul 11.00 - Selesai</p>
+                            <p class="text-muted small mb-0">Sabtu, 29 Februari 2027</p>
+                        </div>
+
+                        <hr class="text-muted my-3">
+
+                        <div class="text-center text-md-start mb-4">
+                            <h5 class="fw-bold text-dark mb-1">Tempat Pelaksanaan:</h5>
+                            <p class="mb-1 text-primary fw-semibold">Gedung Graha Sativa (Perum BULOG)</p>
+                            <p class="text-muted small mb-0">Jl. Jenderal Ahmad Yani No.146-148, Gayungan, Kec.
+                                Gayungan, Kota Surabaya, Jawa Timur 60235</p>
+                        </div>
+
+                        <div class="text-center text-md-start">
+                            <a href="https://maps.app.goo.gl/7ton1rmQZdW37539A" target="_blank"
+                                class="btn btn-outline-dark px-4 py-2 rounded-pill small fw-medium transition-all">
+                                Buka Petunjuk Arah (Google Maps)
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <div class="map-container shadow-sm border rounded h-100 overflow-hidden"
+                        style="min-height: 450px;">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.461425581081!2d112.7288818!3d-7.3271675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fb4da5244659%3A0x946bd51903e291c4!2sGedung%20Graha%20Sativa%20Perum%20Bulog!5e1!3m2!1sid!2sid!4v1792921379417!5m2!1sid!2sid"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="py-5 bg-white border-top">
+        <div class="container">
+
+            <div class="text-center mb-5">
+                <h2 class="font-wedding display-5 mb-2 text-dark">Galeri Kebahagiaan</h2>
+                <p class="text-muted small">Momen-momen indah perjalanan cinta kami</p>
+            </div>
+
+            <div class="row g-3">
+
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="gallery-item rounded overflow-hidden shadow-sm">
+                        <img src="https://plus.unsplash.com/premium_photo-1675851210855-e7727076e829?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                            class="img-fluid w-100 h-100 object-fit-cover" alt="Wedding Moment 1">
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="gallery-item rounded overflow-hidden shadow-sm">
+                        <img src="https://plus.unsplash.com/premium_photo-1675851211519-fc13d860e103?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                            class="img-fluid w-100 h-100 object-fit-cover" alt="Wedding Moment 2">
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="gallery-item rounded overflow-hidden shadow-sm">
+                        <img src="https://plus.unsplash.com/premium_photo-1675851210850-de5525809dd9?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                            class="img-fluid w-100 h-100 object-fit-cover" alt="Wedding Moment 3">
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="gallery-item rounded overflow-hidden shadow-sm">
+                        <img src="https://plus.unsplash.com/premium_photo-1675851211534-4acd0a2b69a8?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                            class="img-fluid w-100 h-100 object-fit-cover" alt="Wedding Moment 4">
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="gallery-item rounded overflow-hidden shadow-sm">
+                        <img src="https://plus.unsplash.com/premium_photo-1675851210789-1bee72bcb8d9?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                            class="img-fluid w-100 h-100 object-fit-cover" alt="Wedding Moment 5">
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="gallery-item rounded overflow-hidden shadow-sm">
+                        <img src="https://plus.unsplash.com/premium_photo-1675851211463-7b04cd066e10?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                            class="img-fluid w-100 h-100 object-fit-cover" alt="Wedding Moment 6">
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="gallery-item rounded overflow-hidden shadow-sm">
+                        <img src="https://plus.unsplash.com/premium_photo-1675851211585-4f9b81996cc3?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                            class="img-fluid w-100 h-100 object-fit-cover" alt="Wedding Moment 7">
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="gallery-item rounded overflow-hidden shadow-sm">
+                        <img src="https://plus.unsplash.com/premium_photo-1675851211686-7e2a15b26464?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                            class="img-fluid w-100 h-100 object-fit-cover" alt="Wedding Moment 8">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-light border-top">
+        <div class="container-fluid px-md-5">
+            <div class="row g-4 align-items-stretch">
+
+
+                <div class="col-12 col-md-6">
+                    <div class="p-4 p-lg-5 bg-white rounded shadow-sm border h-100">
+                        <h2 class="font-wedding display-5 text-center text-md-start mb-2 text-dark">Konfirmasi Kehadiran
+                        </h2>
+                        <p class="text-muted small text-center text-md-start mb-4">Berikan konfirmasi kehadiran Anda dan
+                            doa restu untuk kedua mempelai</p>
+
+                        <form id="rsvpForm">
+
+                            <div class="mb-3">
+                                <label class="form-label small fw-bold text-secondary">Nama Lengkap</label>
+                                <input type="text" id="guestName" class="form-control form-control-sm rounded-pill px-3"
+                                    placeholder="Masukkan nama Anda" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label small fw-bold text-secondary">Konfirmasi Kehadiran</label>
+                                <select id="attendanceStatus" class="form-select form-select-sm rounded-pill px-3"
+                                    required>
+                                    <option value="" selected disabled>Apakah Anda akan hadir?</option>
+                                    <option value="Hadir">Ya, Saya Akan Hadir</option>
+                                    <option value="Tidak Hadir">Maaf, Saya Tidak Bisa Hadir</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-4">
+                                <label class="form-label small fw-bold text-secondary">Ucapan & Doa Restu</label>
+                                <textarea id="guestMessage" class="form-control form-control-sm rounded-3 px-3 py-2"
+                                    rows="4" placeholder="Tulis ucapan selamat Anda..." required></textarea>
+                            </div>
+
+                            <div class="text-center text-md-start">
+                                <button type="submit" class="btn btn-dark w-100 rounded-pill py-2 small fw-medium">Kirim
+                                    Konfirmasi</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <div class="p-4 p-lg-5 bg-white rounded shadow-sm border h-100 d-flex flex-column">
+                        <h6 class="fw-bold text-dark border-bottom pb-2 mb-3">Ucapan dari Teman & Keluarga</h6>
+
+                        <div id="wishesContainer" class="flex-grow-1"
+                            style="max-height: 380px; overflow-y: auto; padding-right: 5px;">
+
+                            <div class="mb-3 border-bottom pb-2">
+                                <div class="d-flex justify-content-between align-items-center mb-1">
+                                    <span class="fw-bold small text-dark">Budi Santoso</span>
+                                    <span class="badge bg-success rounded-pill" style="font-size: 0.65rem;">Hadir</span>
+                                </div>
+                                <p class="text-muted mb-0" style="font-size: 0.85rem;">Selamat ya Alex dan Victoria!
+                                    Semoga lancar acaranya di Graha Sativa dan menjadi keluarga yang bahagia selamanya.
+                                </p>
+                            </div>
+
+                            <div class="mb-2">
+                                <div class="d-flex justify-content-between align-items-center mb-1">
+                                    <span class="fw-bold small text-dark">Siti Rahma</span>
+                                    <span class="badge bg-danger rounded-pill" style="font-size: 0.65rem;">Tidak
+                                        Hadir</span>
+                                </div>
+                                <p class="text-muted mb-0" style="font-size: 0.85rem;">Happy Wedding Alex & Victoria!
+                                    Maaf belum bisa hadir langsung karena bentrok jadwal kerjaan. Sukses terus ya!</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+<button id="musicControlBtn" class="btn btn-dark rounded-circle position-fixed d-none" style="bottom: 20px; right: 20px; z-index: 9999; width: 50px; height: 50px;" onclick="toggleMusik()">
+    <span id="musicIcon">🎵</span>
+</button>
+
+</body>
+<script src="undangan.js"></script>
+
+</html>

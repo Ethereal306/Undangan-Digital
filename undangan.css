@@ -1,0 +1,160 @@
+html,
+body,
+* {
+    margin: 0;
+    padding: 0;
+    /* font-family: 'Helvetica', sans-serif; */
+}
+
+.overflow-locked {
+    overflow: hidden !important;
+    height: 100vh !important;
+}
+
+h1,
+h3,
+h4 {
+    font-family: "GreatVibes", regular;
+    text-align: center;
+    margin-top: 20px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+@font-face {
+    font-family: GreatVibes;
+    src: url('Great_Vibes/GreatVibes-Regular.ttf');
+}
+
+.title {
+    color: white;
+    font-size: 5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.img-hero {
+    display: none;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    object-position: center 20%;
+    display: block;
+}
+
+
+.main-page .block-text {
+    display: flex;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width:  576px) {
+
+    .main-page .row {
+        height: 100vh;
+    }
+    
+    .landing_photo, .img-hero {
+       display: none;
+    }
+    
+    .main-page .block-text {
+        height: 100vh;
+    }
+}
+
+
+.name-couples {
+    color: white;
+    font-size: 3rem;
+}
+
+.couples-container {
+    width: 50%;
+}
+@media screen and (max-width: 480px) {
+  .main-page {
+    font-size: 1rem;
+  }
+
+  .landing_card {
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(pengantin.png);
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  
+}
+
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes button_showup {
+    to {
+        opacity: 1;
+    }
+}
+
+.smooth-enter {
+    animation: fadeInUp 1.2s ease-out forwards;
+    transform: translateY(30px);
+    opacity: 0;
+}
+
+    .button-show {
+        font-family: "GreatVibes", regular;
+        animation: button_showup 1.2s ease-out forwards;
+        opacity: 0;
+    }
+
+    .delay-1 {
+        animation-delay: 0.2s;
+    }
+
+    .delay-2 {
+        animation-delay: 0.8s;
+    }
+
+    .delay-3 {
+        animation-delay: 1.4s;
+    }
+
+    .button-delay-1 {
+        animation-delay: 3.0s;
+    }
+
+    .countdown-box {
+        min-width: 75px;
+
+        transition: all 0.3s ease;
+    }
+
+    .gallery-item {
+        aspect-ratio: 1 / 1;
+        cursor: pointer;
+        background-color: #f8f9fa;
+        transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+
+
+    .gallery-item:hover {
+        transform: scale(1.05);
+    }
+
+    .gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.4s ease;
+    }
