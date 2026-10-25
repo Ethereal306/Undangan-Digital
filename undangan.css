@@ -22,7 +22,7 @@ h4 {
 
 @font-face {
     font-family: GreatVibes;
-    src: url('../Great_Vibes/GreatVibes-Regular.ttf');
+    src: url('Great_Vibes/GreatVibes-Regular.ttf');
 }
 
 .title {
