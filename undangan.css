@@ -21,8 +21,8 @@ h4 {
 }
 
 @font-face {
-    font-family: GreatVibes;
-    src: url('/undangan/Great_Vibes/GreatVibes-Regular.ttf');
+    font-family: 'Great Vibes';
+    src: url('fonts/GreatVibes-Regular.ttf') format('truetype');
 }
 
 .title {
