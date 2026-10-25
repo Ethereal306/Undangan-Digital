@@ -42,32 +42,6 @@ h4 {
     display: block;
 }
 
-
-.main-page .block-text {
-    display: flex;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-@media (max-width:  576px) {
-
-    .main-page .row {
-        height: 100vh;
-    }
-    
-    .landing_photo, .img-hero {
-       display: none;
-    }
-    
-    .main-page .block-text {
-        height: 100vh;
-    }
-}
-
-
 .name-couples {
     color: white;
     font-size: 3rem;
@@ -76,12 +50,15 @@ h4 {
 .couples-container {
     width: 50%;
 }
-@media screen and (max-width: 480px) {
-  .main-page {
-    font-size: 1rem;
-  }
 
-  .landing_card {
+@media (max-width:  575.98px) {
+    
+
+
+    .landing_photo, .img-hero {
+       display: none;
+    }
+    .landing_card {
     background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(pengantin.png);
     width: 100%;
     height: 100vh;
@@ -89,8 +66,22 @@ h4 {
     background-position: center;
     background-size: cover;
   }
-  
+  .couples-container{
+    width: 50%;
+  }
+
+  .name-couples{
+    color : white;
+    font-size: 2.5rem;
+  }
+    
+    .main-page .block-text {
+        height: 100vh;
+    }
 }
+
+
+  
 
 
 @keyframes fadeInUp {
